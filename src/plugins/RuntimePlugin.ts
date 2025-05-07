@@ -1,7 +1,4 @@
-import {
-  EaCRuntimeConfig,
-  EaCRuntimePluginConfig,
-} from '@fathym/eac/runtime/config';
+import { EaCRuntimeConfig, EaCRuntimePluginConfig } from '@fathym/eac/runtime/config';
 import { EaCRuntimePlugin } from '@fathym/eac/runtime/plugins';
 import { EverythingAsCode } from '@fathym/eac';
 import { EverythingAsCodeApplications } from '@fathym/eac-applications';
@@ -36,6 +33,15 @@ export default class RuntimePlugin implements EaCRuntimePlugin {
               'host.docker.internal': {
                 Hostname: 'host.docker.internal',
                 Port: config.Servers![0].port || 8000,
+              },
+              'open-industrial.fathym.com': {
+                Hostname: 'open-industrial.fathym.com',
+              },
+              'www.openindustrial.co': {
+                Hostname: 'www.openindustrial.co',
+              },
+              'open-industrial-core-runtime.azurewebsites.net': {
+                Hostname: 'open-industrial-core-runtime.azurewebsites.net',
               },
             },
             ModifierResolvers: {},
